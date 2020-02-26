@@ -1,0 +1,9 @@
+block(sight).elem(image) {
+  margin-bottom: 1em;
+  display: block;
+  height: 200px;
+  width: 100%;
+  background-color: #c7c7c7;
+  object-fit: cover;
+  object-position: center;
+}

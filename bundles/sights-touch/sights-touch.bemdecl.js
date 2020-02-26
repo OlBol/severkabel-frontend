@@ -6,9 +6,9 @@ exports.blocks = [
       {
         name: 'route',
         vals: [
-          { name: 'policy' },
-        ],
-      },
-    ],
-  },
+          { name: 'sights' }
+        ]
+      }
+    ]
+  }
 ];

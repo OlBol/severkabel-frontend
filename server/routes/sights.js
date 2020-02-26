@@ -17,7 +17,7 @@ const action = async ( context, params ) => {
 
   return {
     title: 'Письмо успешно отправлено',
-    page: 'thanks',
+    page: 'sights',
     meta: { noIndex: true },
     params,
     api: _api,

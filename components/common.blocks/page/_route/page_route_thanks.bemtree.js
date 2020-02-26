@@ -1,31 +1,21 @@
 block( 'page' ).mod( 'route', 'thanks' )( {
-  route: [
-    { block: 'header' },
-    {
-      elem: 'layout',
-      elemMods: { width: 'tiny' },
-      attrs: {
-        style: 'padding-top: 3em; padding-bottom: 13em;',
-      },
-      content: [
-        {
-          block: 'heading',
-          mods: { size: 'xxl' },
-          content: 'Спасибо',
-        },
-        { tag: 'br' },
-        {
-          block: 'paragraph',
-          mods: { size: 'xl' },
-          attrs: {
-            style: 'max-width: 40em;',
+  route: node => {
+    const pockemonData = node.data.api[ 0 ].data.abilities;
+
+    return [
+      {
+        content: [
+          pockemonData.map( item => ( {
+            block: 'pockemon',
+            name: item.ability.name,
+            url: item.ability.url,
+            slot: item.slot,
+          } ) ),
+          {
+            elem: 'layout',
           },
-          content: [
-            'Спасибо, мы получили ваше письмо и постараемся ответить на него сразу, ',
-            'как только появится интересующая вас информация.',
-          ],
-        },
-      ],
-    },
-  ],
+        ],
+      },
+    ]
+  },
 } );

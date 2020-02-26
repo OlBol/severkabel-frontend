@@ -22,9 +22,7 @@
     "test": "npm run lint",
     "share": "ngrok http 3012"
   },
-  "pre-commit": [
-    "test"
-  ],
+
   "engines": {
     "node": ">=10"
   },
@@ -47,7 +45,7 @@
     "postcss-csso": "^4.0.0"
   },
   "devDependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "axios-extensions": "^2.0.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",

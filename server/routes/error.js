@@ -1,8 +1,8 @@
-const client = require( '../request/_request' );
+// const client = require( '../request/_request' );
 
 const api = async () => {
   const response = await Promise.all( [
-    client.getDocument( 'serviceBasedData' ),
+    // client.getDocument( 'serviceBasedData' ),
   ] );
 
   return {

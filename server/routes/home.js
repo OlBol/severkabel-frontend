@@ -1,19 +1,24 @@
-const client = require( '../request/_request' );
+// const client = require( '../request/_request' );
 
 const [ lang ] = JSON.parse( process.env.LANGS );
 
-const api = async () => {
-  const response = await Promise.all( [
-    client.getDocument( 'serviceBasedData' ),
-    client.fetch( '*[_type == "index"] {...,"events": events[]->{...}}[0]', {} ),
-  ] );
+const api = async () =>
+  // const response = await Promise.all( [
+  //   client.getDocument( 'serviceBasedData' ),
+  //   client.fetch( '*[_type == "index"] {...,"events": events[]->{...}}[0]', {} ),
+  // ] );
 
-  return {
-    settings: response[ 0 ],
-    page: response[ 1 ],
-  };
-};
+  // console.log(response)
 
+  // return {
+  //   settings: response[ 0 ],
+  //   page: response[ 1 ],
+  // };
+
+  ( {
+    settings: {},
+    page: {},
+  } );
 const action = async ( context, params ) => {
   const _api = await api();
   const {

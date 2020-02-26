@@ -14,6 +14,9 @@
         block: 'paragraph',
         mods: { size: 'l' },
       },
+      {
+        block: 'pockemon',
+      },
     ],
   },
 ];

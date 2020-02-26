@@ -10,9 +10,9 @@ const events = require( './routes/events' );
 const event = require( './routes/event' );
 const contacts = require( './routes/contacts' );
 const thanks = require( './routes/thanks' );
-const policy = require( './routes/policy' );
 const projects = require( './routes/projects' );
 const project = require( './routes/project' );
+const sights = require( './routes/sights' );
 
 
 const router = new UniversalRouter(
@@ -86,9 +86,9 @@ const router = new UniversalRouter(
         load: async () => await thanks,
       },
       {
-        path: '/policy',
-        name: 'policy',
-        load: async () => await policy,
+        path: '/sights',
+        name: 'sights',
+        load: async () => await sights,
       },
 
       {

@@ -1,0 +1,4 @@
+block(page).elem(wrapper) {
+  display: flex;
+  flex-wrap: wrap;
+}

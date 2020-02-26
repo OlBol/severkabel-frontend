@@ -3,10 +3,12 @@ const MarkdownBemjson = require( 'markdown-bemjson' );
 const _ = require( 'lodash' );
 const { decodeHTML } = require( 'entities' );
 
-const builder = imageUrlBuilder( {
-  projectId: 'p9gjsb2n',
-  dataset: 'production',
-} );
+const builder = imageUrlBuilder(
+  {
+    projectId: '39dycnz5',
+    dataset: 'develop',
+  }
+);
 
 const decodeParagraph = entities => Array.isArray( entities )
   ? entities.map( entity => typeof entity === 'string' ? decodeHTML( entity ) : decodeParagraph( entity ) )
@@ -117,7 +119,8 @@ block( 'root' ).replace()( ( node, ctx ) => {
       { elem: 'meta', attrs: { property: 'og:locale', content: config.langs[ 0 ] === 'ru' ? 'ru_RU' : 'en_US' } },
       { elem: 'meta', attrs: { property: 'og:type', content: 'website' } },
       meta.noIndex && { elem: 'meta', attrs: { name: 'robots', content: 'noindex, nofollow' } },
-      { html: data.api.settings.counter[ config.langs[ 0 ] ] }, // counters
+
+      // { html: data.api.settings.counter[ config.langs[ 0 ] ] }, // counters
     ],
     mods: { route: data.view || data.page },
   };

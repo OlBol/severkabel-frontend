@@ -1,11 +1,12 @@
-const client = require( '../request/_request' );
+// const client = require( '../request/_request' );
 
 const [ lang ] = JSON.parse( process.env.LANGS );
 
 const api = async () => {
   const [ settings, [ page ] ] = await Promise.all( [
-    client.getDocument( 'serviceBasedData' ),
-    client.fetch( '*[ _id == "innovations" ] { ..., "innovations": innovations[] { ..., innovation-> } }', {} ),
+    // request( '/sights' ),
+
+    // reuest( '' ),
   ] );
 
   return {
